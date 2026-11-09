@@ -1,0 +1,284 @@
+# Answer-label recodes, applied by src/harmonise.py.
+# Every raw label must appear here (or the pipeline stops with an "unmapped label" error).
+# Curly apostrophes (’) are normalised to straight ones (') BEFORE lookup.
+# Keys under a variable are either a year (2023/2024/2025) or "all" (applies to every year).
+# A value of null means "treat as missing".
+
+ai_use_status:
+  all:
+    "Yes": "Yes"
+    "No, but I plan to soon": "Plan to"
+    "No, and I don't plan to": "No"
+    "Yes, I use AI tools daily": "Yes"
+    "Yes, I use AI tools weekly": "Yes"
+    "Yes, I use AI tools monthly or infrequently": "Yes"
+
+ai_use_frequency:          # 2025 only
+  2025:
+    "Yes, I use AI tools daily": "Daily"
+    "Yes, I use AI tools weekly": "Weekly"
+    "Yes, I use AI tools monthly or infrequently": "Monthly or less"
+    "No, but I plan to soon": "Not using"
+    "No, and I don't plan to": "Not using"
+
+ai_trust:                   # ordered 1 (highly distrust) .. 5 (highly trust)
+  all:
+    "Highly distrust": "1 Highly distrust"
+    "Somewhat distrust": "2 Somewhat distrust"
+    "Neither trust nor distrust": "3 Neither"
+    "Somewhat trust": "4 Somewhat trust"
+    "Highly trust": "5 Highly trust"
+
+ai_sentiment:
+  all:
+    "Very unfavorable": "1 Very unfavorable"
+    "Unfavorable": "2 Unfavorable"
+    "Indifferent": "3 Indifferent"
+    "Favorable": "4 Favorable"
+    "Very favorable": "5 Very favorable"
+    "Unsure": "Unsure"
+
+ai_complex:
+  all:
+    "Very poor at handling complex tasks": "1 Very poor"
+    "Bad at handling complex tasks": "2 Bad"
+    "Neither good or bad at handling complex tasks": "3 Neither"
+    "Good, but not great at handling complex tasks": "4 Good, not great"
+    "Very well at handling complex tasks": "5 Very well"
+    "I don't use AI tools for complex tasks / I don't know": "Don't use for complex / don't know"
+
+ai_threat:
+  all:
+    "Yes": "Yes"
+    "No": "No"
+    "I'm not sure": "Not sure"
+
+ai_agents:                  # 2025 only
+  2025:
+    "Yes, I use AI agents at work daily": "Uses agents"
+    "Yes, I use AI agents at work weekly": "Uses agents"
+    "Yes, I use AI agents at work monthly or infrequently": "Uses agents"
+    "No, I use AI exclusively in copilot/autocomplete mode": "Copilot/autocomplete only"
+    "No, but I plan to": "No agents"
+    "No, and I don't plan to": "No agents"
+
+ic_or_pm:
+  all:
+    "Individual contributor": "Individual contributor"
+    "People manager": "People manager"
+
+age_group:
+  all:
+    "Under 18 years old": "Under 18"
+    "18-24 years old": "18-24"
+    "25-34 years old": "25-34"
+    "35-44 years old": "35-44"
+    "45-54 years old": "45-54"
+    "55-64 years old": "55+"
+    "65 years or older": "55+"
+    "Prefer not to say": null
+
+org_size:
+  all:
+    "Just me - I am a freelancer, sole proprietor, etc.": "1 Solo / freelancer"
+    "2 to 9 employees": "2 Under 20"
+    "10 to 19 employees": "2 Under 20"
+    "Less than 20 employees": "2 Under 20"
+    "20 to 99 employees": "3 20-99"
+    "100 to 499 employees": "4 100-999"
+    "500 to 999 employees": "4 100-999"
+    "1,000 to 4,999 employees": "5 1k-9.9k"
+    "5,000 to 9,999 employees": "5 1k-9.9k"
+    "10,000 or more employees": "6 10k+"
+    "I don't know": null
+
+ed_level:
+  all:
+    "Primary/elementary school": "Below bachelor's"
+    "Secondary school (e.g. American high school, German Realschule or Gymnasium, etc.)": "Below bachelor's"
+    "Some college/university study without earning a degree": "Below bachelor's"
+    "Associate degree (A.A., A.S., etc.)": "Below bachelor's"
+    "Bachelor's degree (B.A., B.S., B.Eng., etc.)": "Bachelor's"
+    "Master's degree (M.A., M.S., M.Eng., MBA, etc.)": "Master's"
+    "Professional degree (JD, MD, Ph.D, Ed.D, etc.)": "Doctorate / professional"
+    "Something else": "Other"
+    "Other (please specify):": "Other"
+
+country:                     # only renames; everything else passes through unchanged
+  rename:
+    "The former Yugoslav Republic of Macedonia": "Republic of North Macedonia"
+    "United Kingdom of Great Britain and Northern Ireland": "United Kingdom"
+    "United States of America": "United States"
+    "Russian Federation": "Russia"
+    "Iran, Islamic Republic of...": "Iran"
+
+role_family:
+  all:
+    "Developer, full-stack": "Full-stack dev"
+    "Developer, back-end": "Back-end dev"
+    "Developer, front-end": "Front-end dev"
+    "Developer, mobile": "Mobile / desktop / game dev"
+    "Developer, desktop or enterprise applications": "Mobile / desktop / game dev"
+    "Developer, game or graphics": "Mobile / desktop / game dev"
+    "Developer, embedded applications or devices": "Embedded / hardware"
+    "Hardware Engineer": "Embedded / hardware"
+    "Developer, QA or test": "QA / test"
+    "Data scientist or machine learning specialist": "Data / AI / ML"
+    "Data scientist": "Data / AI / ML"
+    "Engineer, data": "Data / AI / ML"
+    "Data engineer": "Data / AI / ML"
+    "Data or business analyst": "Data / AI / ML"
+    "Developer, AI": "Data / AI / ML"
+    "AI/ML engineer": "Data / AI / ML"
+    "Developer, AI apps or physical AI": "Data / AI / ML"
+    "DevOps specialist": "DevOps / cloud / infra / security"
+    "DevOps engineer or professional": "DevOps / cloud / infra / security"
+    "Cloud infrastructure engineer": "DevOps / cloud / infra / security"
+    "Engineer, site reliability": "DevOps / cloud / infra / security"
+    "System administrator": "DevOps / cloud / infra / security"
+    "Security professional": "DevOps / cloud / infra / security"
+    "Cybersecurity or InfoSec professional": "DevOps / cloud / infra / security"
+    "Database administrator": "DevOps / cloud / infra / security"
+    "Database administrator or engineer": "DevOps / cloud / infra / security"
+    "Engineering manager": "Manager / executive / product"
+    "Senior Executive (C-Suite, VP, etc.)": "Manager / executive / product"
+    "Senior executive (C-suite, VP, etc.)": "Manager / executive / product"
+    "Project manager": "Manager / executive / product"
+    "Product manager": "Manager / executive / product"
+    "Founder, technology or otherwise": "Manager / executive / product"
+    "Architect, software or solutions": "Architect (2025 only)"
+    "Academic researcher": "Research / academia / education"
+    "Research & Development role": "Research / academia / education"
+    "Scientist": "Research / academia / education"
+    "Applied scientist": "Research / academia / education"
+    "Educator": "Research / academia / education"
+    "Student": "Student"
+    "Other (please specify):": "Other"
+    "Designer": "Other"
+    "UX, Research Ops or UI design professional": "Other"
+    "Marketing or sales professional": "Other"
+    "Developer Experience": "Other"
+    "Developer Advocate": "Other"
+    "Blockchain": "Other"
+    "Support engineer or analyst": "Other"
+    "Financial analyst or engineer": "Other"
+    "Retired": "Other"
+
+# ---------- multi-select item maps (raw item -> column key) ----------
+
+ai_tasks:
+  all:
+    "Writing code": "writing_code"
+    "Debugging and getting help": "debugging"
+    "Debugging or fixing code": "debugging"
+    "Documenting code": "documenting_code"
+    "Learning about a codebase": "learning_codebase"
+    "Testing code": "testing_code"
+    "Project planning": "project_planning"
+    "Committing and reviewing code": "code_review"
+    "Deployment and monitoring": "deployment"
+    "Search for answers": "search_answers"
+    "Generating content or synthetic data": "content_generation"
+    "Predictive analytics": "predictive_analytics"
+    "Learning new concepts or technologies": "learning_new_tech"
+    "Creating or maintaining documentation": "maintaining_docs"
+    "Collaborating with teammates": "collaborating"
+    "Other (please describe)": "other"
+    "Other (please specify):": "other"
+    "Other (write in):": "other"
+
+# Which task keys exist in which years (used for comparability flags).
+ai_tasks_years:
+  writing_code: [2023, 2024, 2025]
+  debugging: [2023, 2024, 2025]
+  documenting_code: [2023, 2024, 2025]
+  learning_codebase: [2023, 2024, 2025]
+  testing_code: [2023, 2024, 2025]
+  project_planning: [2023, 2024, 2025]
+  code_review: [2023, 2024, 2025]
+  deployment: [2023, 2024, 2025]
+  search_answers: [2024, 2025]
+  content_generation: [2024, 2025]
+  predictive_analytics: [2024, 2025]
+  learning_new_tech: [2025]
+  maintaining_docs: [2025]
+  collaborating: [2023]
+  other: [2023, 2024, 2025]
+
+ai_frustration:
+  2025:
+    "AI solutions that are almost right, but not quite": "almost_right"
+    "Debugging AI-generated code is more time-consuming": "debugging_slower"
+    "I don't use AI tools regularly": "not_regular_user"
+    "I've become less confident in my own problem-solving": "less_confident"
+    "It's hard to understand how or why the code works": "hard_to_understand"
+    "Other (write in):": "other"
+    "I haven't encountered any problems": "no_problems"
+
+ai_benefits:
+  all:
+    "Increase productivity": "productivity"
+    "Greater efficiency": "efficiency"
+    "Speed up learning": "learning"
+    "Improve accuracy in coding": "accuracy"
+    "Improve collaboration": "collaboration"
+    "Make workload more manageable": "workload"
+    "Other (please explain)": "other"
+    "Other (please specify):": "other"
+
+ai_challenges:
+  2024:
+    "Don't trust the output or answers": "dont_trust_output"
+    "AI tools lack context of codebase,  internal architecture, and/or company knowledge": "lacks_context"
+    "We don't have the right policies in place to reduce security risks": "no_security_policy"
+    "Lack of proper training and education on new tools": "lack_training"
+    "Not everyone uses them": "not_everyone_uses"
+    "They create more work (more code/PRs to review, etc.)": "creates_more_work"
+    "Lack of executive buy-in": "no_exec_buy_in"
+    "Other (please specify):": "other"
+
+# AI tool / model names -> [harmonised name, vendor family, kind]
+ai_tools:
+  "ChatGPT": ["ChatGPT", "OpenAI", "Product"]
+  "OpenAI Codex": ["OpenAI Codex", "OpenAI", "Product"]
+  "openAI GPT (chatbot models)": ["OpenAI GPT models", "OpenAI", "LLM model"]
+  "openAI Reasoning models": ["OpenAI reasoning models", "OpenAI", "LLM model"]
+  "openAI Image generating models": ["OpenAI image models", "OpenAI", "LLM model"]
+  "GitHub Copilot": ["GitHub Copilot", "Microsoft / GitHub", "Product"]
+  "Bing AI": ["Bing AI", "Microsoft / GitHub", "Product"]
+  "Visual Studio Intellicode": ["Visual Studio IntelliCode", "Microsoft / GitHub", "Product"]
+  "Microsoft Phi-4 models": ["Microsoft Phi-4", "Microsoft / GitHub", "LLM model"]
+  "Google Bard AI": ["Google Bard / Gemini", "Google", "Product"]
+  "Google Gemini": ["Google Bard / Gemini", "Google", "Product"]
+  "Gemini (Flash general purpose models)": ["Gemini Flash models", "Google", "LLM model"]
+  "Gemini (Pro Reasoning models)": ["Gemini Pro models", "Google", "LLM model"]
+  "Claude": ["Claude", "Anthropic", "Product"]
+  "Anthropic: Claude Sonnet": ["Claude Sonnet", "Anthropic", "LLM model"]
+  "Claude Code": ["Claude Code", "Anthropic", "AI editor / agent"]
+  "AWS CodeWhisperer": ["Amazon CodeWhisperer / Q", "Amazon", "Product"]
+  "Amazon Q": ["Amazon CodeWhisperer / Q", "Amazon", "Product"]
+  "Amazon Titan models": ["Amazon Titan", "Amazon", "LLM model"]
+  "Meta AI": ["Meta AI", "Meta", "Product"]
+  "Meta Llama (all models)": ["Meta Llama", "Meta", "LLM model"]
+  "DeepSeek (R- Reasoning models)": ["DeepSeek R", "DeepSeek", "LLM model"]
+  "DeepSeek (V- General purpose models)": ["DeepSeek V", "DeepSeek", "LLM model"]
+  "X Grok models": ["Grok", "xAI", "LLM model"]
+  "Mistral AI models": ["Mistral", "Mistral", "LLM model"]
+  "Perplexity AI": ["Perplexity", "Perplexity", "Product"]
+  "Perplexity Sonar models": ["Perplexity Sonar", "Perplexity", "LLM model"]
+  "Alibaba Cloud Qwen models": ["Qwen", "Alibaba", "LLM model"]
+  "Cohere: Command A": ["Cohere Command", "Cohere", "LLM model"]
+  "Reka (Flash 3 or other Reka models)": ["Reka", "Other", "LLM model"]
+  "Synk Code": ["Snyk Code", "Other", "Product"]
+  "Snyk Code": ["Snyk Code", "Other", "Product"]
+  "Cursor": ["Cursor", "Other", "AI editor / agent"]
+  "Windsurf": ["Windsurf", "Other", "AI editor / agent"]
+  "Cline and/or Roo": ["Cline / Roo", "Other", "AI editor / agent"]
+  "Aider": ["Aider", "Other", "AI editor / agent"]
+  "Lovable.dev": ["Lovable", "Other", "AI editor / agent"]
+  "Bolt": ["Bolt", "Other", "AI editor / agent"]
+  "Trae": ["Trae", "Other", "AI editor / agent"]
+  # any other 2023/2024 product (Tabnine, Codeium, Phind, WolframAlpha, ...) keeps its name, family "Other", kind "Product"
+
+# 2025 DevEnvsHaveWorkedWith items that count as AI coding tools (everything else in that question is ignored)
+ai_editors_2025: ["Cursor", "Claude Code", "Windsurf", "Cline and/or Roo", "Aider", "Lovable.dev", "Bolt", "Trae"]

@@ -1,0 +1,96 @@
+// ============================================================================
+// DAX measures for the AI Adoption vs Trust report (Power BI Desktop, free).
+// Create a blank table called "_Measures" (Enter data -> one empty column) and paste each measure into it.
+// Table names match the CSV files in data/processed/powerbi/ (Power BI uses the file name as the table name).
+// Default scope = professional developers (add a page/report filter: fact_respondents[is_professional] = 1).
+// ============================================================================
+
+Respondents =
+COUNTROWS ( fact_respondents )
+
+// ---------- Adoption ----------
+Answered AI Use =
+CALCULATE ( [Respondents], NOT ISBLANK ( fact_respondents[uses_ai] ) )
+
+AI Users =
+CALCULATE ( [Respondents], fact_respondents[uses_ai] = 1 )
+
+Adoption % =
+DIVIDE ( [AI Users], [Answered AI Use] )
+
+// ---------- Trust (comparable base = current AI users who answered the trust question) ----------
+Trust Base (AI users) =
+CALCULATE ( [Respondents], fact_respondents[in_trust_base_users] = 1 )
+
+Trust % =
+DIVIDE (
+    CALCULATE ( [Respondents], fact_respondents[in_trust_base_users] = 1, fact_respondents[trusts_ai] = 1 ),
+    [Trust Base (AI users)]
+)
+
+Distrust % =
+DIVIDE (
+    CALCULATE ( [Respondents], fact_respondents[in_trust_base_users] = 1, fact_respondents[distrusts_ai] = 1 ),
+    [Trust Base (AI users)]
+)
+
+Highly Distrust % =
+DIVIDE (
+    CALCULATE ( [Respondents], fact_respondents[in_trust_base_users] = 1, fact_respondents[highly_distrusts_ai] = 1 ),
+    [Trust Base (AI users)]
+)
+
+// Hide small segments (same rule as the Python charts: fewer than 100 AI users -> blank)
+Distrust % (n>=100) =
+IF ( [Trust Base (AI users)] < 100, BLANK (), [Distrust %] )
+
+Trust % (n>=100) =
+IF ( [Trust Base (AI users)] < 100, BLANK (), [Trust %] )
+
+Distrust MoE (95%) =
+1.96 * SQRT ( DIVIDE ( [Distrust %] * ( 1 - [Distrust %] ), [Trust Base (AI users)] ) )
+
+Trust Gap (pp) =
+( [Adoption %] - [Trust %] ) * 100
+
+Distrust change vs 2023 (pp) =
+VAR cur = [Distrust %]
+VAR base2023 = CALCULATE ( [Distrust %], dim_year[survey_year] = 2023 )
+RETURN ( cur - base2023 ) * 100
+
+// ---------- Official definition (for the "why the base matters" visual only) ----------
+Trust % (official base) =
+DIVIDE (
+    CALCULATE ( [Respondents], fact_respondents[in_trust_base_official] = 1, fact_respondents[trusts_ai] = 1 ),
+    CALCULATE ( [Respondents], fact_respondents[in_trust_base_official] = 1 )
+)
+
+// ---------- 2025 frustrations (AI users who answered the frustration question) ----------
+Frustration Base =
+CALCULATE (
+    [Respondents],
+    fact_respondents[in_trust_base_users] = 1,
+    NOT ISBLANK ( fact_respondents[frus_almost_right] )
+)
+
+Almost Right % =
+DIVIDE (
+    CALCULATE ( [Respondents], fact_respondents[in_trust_base_users] = 1, fact_respondents[frus_almost_right] = 1 ),
+    [Frustration Base]
+)
+
+Debugging Slower % =
+DIVIDE (
+    CALCULATE ( [Respondents], fact_respondents[in_trust_base_users] = 1, fact_respondents[frus_debugging_slower] = 1 ),
+    [Frustration Base]
+)
+
+Distrust % | reports debugging slower =
+CALCULATE ( [Distrust %], fact_respondents[frus_debugging_slower] = 1 )
+
+Distrust % | no debugging complaint =
+CALCULATE ( [Distrust %], fact_respondents[frus_debugging_slower] = 0 )
+
+// ---------- Tasks / tools (through the bridge tables, relationship filter direction = Both) ----------
+AI Users doing Task =
+CALCULATE ( DISTINCTCOUNT ( bridge_ai_tasks[resp_id] ), fact_respondents[in_trust_base_users] = 1 )

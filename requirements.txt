@@ -1,0 +1,19 @@
+# Python 3.11 or 3.12 (tested on 3.11.9 and 3.12.10, Windows 11)
+# pandas is pinned to 2.3.x on purpose: pandas 3.x wheels were blocked by Windows Smart App Control on the dev machine.
+pandas==2.3.3
+numpy==2.4.6
+pyarrow==26.0.0
+duckdb==2.0.0
+statsmodels==0.15.0
+patsy==1.0.3
+scipy==1.17.1
+matplotlib==3.11.2
+seaborn==0.13.2
+plotly==7.1.0
+PyYAML==6.0.3
+markdown==3.7
+jupyter==1.1.1
+nbconvert==7.17.2
+nbformat==5.11.1
+nbclient==0.11.0
+ipykernel==7.4.0

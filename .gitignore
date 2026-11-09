@@ -1,0 +1,27 @@
+# Environment
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Data (re-download with src/download.py; ~460 MB raw)
+data/raw/
+data/interim/
+data/processed/*.parquet
+data/processed/*.duckdb
+data/processed/*.duckdb.wal
+
+# Power BI / Tableau exports: keep the small aggregates and dimensions, ignore the large row-level CSVs
+data/processed/powerbi/fact_*.csv
+data/processed/powerbi/bridge_*.csv
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Built static site (python run_pipeline.py --only build_site; deployed by GitHub Actions)
+site/
+
+# Local Claude Code preview config
+.claude/

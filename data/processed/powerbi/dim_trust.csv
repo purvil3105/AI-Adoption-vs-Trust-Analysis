@@ -1,0 +1,6 @@
+trust_label,trust_score,trust_group
+1 Highly distrust,1,Distrust
+2 Somewhat distrust,2,Distrust
+3 Neither,3,Neutral
+4 Somewhat trust,4,Trust
+5 Highly trust,5,Trust

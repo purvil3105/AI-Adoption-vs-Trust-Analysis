@@ -1,0 +1,85 @@
+year,question,group,answer,official_pct,our_pct,official_base,our_base,diff_pp,status
+2023,AISelect,All Respondents,Yes,43.78,44.38,89184,87973,0.6,PASS
+2023,AISelect,All Respondents,Plan to,25.46,25.81,89184,87973,0.35,PASS
+2023,AISelect,All Respondents,No,29.4,29.81,89184,87973,0.41,PASS
+2023,AISelect,Professional Developers,Yes,44.17,44.17,67237,67237,0.0,PASS
+2023,AISelect,Professional Developers,Plan to,25.88,25.88,67237,67237,0.0,PASS
+2023,AISelect,Professional Developers,No,29.95,29.95,67237,67237,0.0,PASS
+2023,AISent,All Respondents,5 Very favorable,27.72,27.72,61501,61501,0.0,PASS
+2023,AISent,All Respondents,4 Favorable,48.56,48.56,61501,61501,0.0,PASS
+2023,AISent,All Respondents,3 Indifferent,16.5,16.5,61501,61501,0.0,PASS
+2023,AISent,All Respondents,Unsure,4.02,4.02,61501,61501,0.0,PASS
+2023,AISent,All Respondents,2 Unfavorable,2.76,2.76,61501,61501,0.0,PASS
+2023,AISent,All Respondents,1 Very unfavorable,0.44,0.44,61501,61501,0.0,PASS
+2023,AISent,Professional Developers,5 Very favorable,27.71,27.71,46928,46928,0.0,PASS
+2023,AISent,Professional Developers,4 Favorable,48.41,48.41,46928,46928,0.0,PASS
+2023,AISent,Professional Developers,3 Indifferent,16.8,16.8,46928,46928,0.0,PASS
+2023,AISent,Professional Developers,Unsure,3.88,3.88,46928,46928,0.0,PASS
+2023,AISent,Professional Developers,2 Unfavorable,2.78,2.78,46928,46928,0.0,PASS
+2023,AISent,Professional Developers,1 Very unfavorable,0.42,0.42,46928,46928,0.0,PASS
+2023,AIBen,All Respondents,5 Highly trust,2.85,2.85,39042,61396,0.0,PASS
+2023,AIBen,All Respondents,4 Somewhat trust,39.3,39.3,39042,61396,0.0,PASS
+2023,AIBen,All Respondents,3 Neither,30.68,30.68,39042,61396,0.0,PASS
+2023,AIBen,All Respondents,2 Somewhat distrust,21.71,21.71,39042,61396,0.0,PASS
+2023,AIBen,All Respondents,1 Highly distrust,5.46,5.46,39042,61396,0.0,PASS
+2024,AISelect,All Respondents,Yes,61.84,61.84,60907,60907,0.0,PASS
+2024,AISelect,All Respondents,Plan to,13.8,13.8,60907,60907,0.0,PASS
+2024,AISelect,All Respondents,No,24.36,24.36,60907,60907,0.0,PASS
+2024,AISelect,Professional Developers,Yes,63.17,63.26,46049,46853,0.09,PASS
+2024,AISelect,Professional Developers,Plan to,13.45,13.35,46049,46853,-0.1,PASS
+2024,AISelect,Professional Developers,No,23.38,23.39,46049,46853,0.01,PASS
+2024,AISent,All Respondents,5 Very favorable,23.65,23.65,45873,45873,0.0,PASS
+2024,AISent,All Respondents,4 Favorable,48.32,48.32,45873,45873,0.0,PASS
+2024,AISent,All Respondents,3 Indifferent,18.67,18.67,45873,45873,0.0,PASS
+2024,AISent,All Respondents,Unsure,2.96,2.96,45873,45873,0.0,PASS
+2024,AISent,All Respondents,2 Unfavorable,5.19,5.19,45873,45873,0.0,PASS
+2024,AISent,All Respondents,1 Very unfavorable,1.21,1.21,45873,45873,0.0,PASS
+2024,AISent,Professional Developers,5 Very favorable,23.69,23.65,35142,35753,-0.04,PASS
+2024,AISent,Professional Developers,4 Favorable,48.29,48.31,35142,35753,0.02,PASS
+2024,AISent,Professional Developers,3 Indifferent,18.86,18.87,35142,35753,0.01,PASS
+2024,AISent,Professional Developers,Unsure,2.7,2.7,35142,35753,0.0,PASS
+2024,AISent,Professional Developers,2 Unfavorable,5.26,5.26,35142,35753,0.0,PASS
+2024,AISent,Professional Developers,1 Very unfavorable,1.2,1.21,35142,35753,0.01,PASS
+2024,AIAcc,All Respondents,5 Highly trust,2.72,2.72,37302,37302,0.0,PASS
+2024,AIAcc,All Respondents,4 Somewhat trust,40.32,40.32,37302,37302,0.0,PASS
+2024,AIAcc,All Respondents,3 Neither,26.59,26.59,37302,37302,0.0,PASS
+2024,AIAcc,All Respondents,2 Somewhat distrust,22.51,22.51,37302,37302,0.0,PASS
+2024,AIAcc,All Respondents,1 Highly distrust,7.86,7.86,37302,37302,0.0,PASS
+2024,AIAcc,Professional Developers,5 Highly trust,2.26,2.25,28829,29379,-0.01,PASS
+2024,AIAcc,Professional Developers,4 Somewhat trust,39.26,39.18,28829,29379,-0.08,PASS
+2024,AIAcc,Professional Developers,3 Neither,27.34,27.25,28829,29379,-0.09,PASS
+2024,AIAcc,Professional Developers,2 Somewhat distrust,22.88,23.04,28829,29379,0.16,PASS
+2024,AIAcc,Professional Developers,1 Highly distrust,8.26,8.28,28829,29379,0.02,PASS
+2025,AISelect,All Respondents,Yes,78.48,78.5,33662,33720,0.02,PASS
+2025,AISelect,All Respondents,Plan to,5.32,5.33,33662,33720,0.01,PASS
+2025,AISelect,All Respondents,No,16.19,16.17,33662,33720,-0.02,PASS
+2025,AISelect,Professional Developers,Yes,80.73,80.76,26004,26045,0.03,PASS
+2025,AISelect,Professional Developers,Plan to,4.58,4.57,26004,26045,-0.01,PASS
+2025,AISelect,Professional Developers,No,14.69,14.67,26004,26045,-0.02,PASS
+2025,AISent,All Respondents,5 Very favorable,22.93,22.94,33412,33467,0.01,PASS
+2025,AISent,All Respondents,4 Favorable,36.77,36.79,33412,33467,0.02,PASS
+2025,AISent,All Respondents,3 Indifferent,17.57,17.57,33412,33467,0.0,PASS
+2025,AISent,All Respondents,Unsure,2.27,2.27,33412,33467,0.0,PASS
+2025,AISent,All Respondents,2 Unfavorable,10.82,10.82,33412,33467,0.0,PASS
+2025,AISent,All Respondents,1 Very unfavorable,9.63,9.62,33412,33467,-0.01,PASS
+2025,AISent,Professional Developers,5 Very favorable,23.53,23.54,25814,25853,0.01,PASS
+2025,AISent,Professional Developers,4 Favorable,37.67,37.67,25814,25853,0.0,PASS
+2025,AISent,Professional Developers,3 Indifferent,17.4,17.4,25814,25853,0.0,PASS
+2025,AISent,Professional Developers,Unsure,1.75,1.75,25814,25853,0.0,PASS
+2025,AISent,Professional Developers,2 Unfavorable,10.56,10.55,25814,25853,-0.01,PASS
+2025,AISent,Professional Developers,1 Very unfavorable,9.09,9.09,25814,25853,0.0,PASS
+2025,AIAcc,All Respondents,5 Highly trust,3.13,3.15,33244,33297,0.02,PASS
+2025,AIAcc,All Respondents,4 Somewhat trust,29.64,29.64,33244,33297,0.0,PASS
+2025,AIAcc,All Respondents,2 Somewhat distrust,26.08,26.08,33244,33297,0.0,PASS
+2025,AIAcc,All Respondents,1 Highly distrust,19.63,19.62,33244,33297,-0.01,PASS
+2025,AIAcc,Professional Developers,5 Highly trust,2.74,2.74,25701,25739,0.0,PASS
+2025,AIAcc,Professional Developers,4 Somewhat trust,29.65,29.65,25701,25739,0.0,PASS
+2025,AIAcc,Professional Developers,2 Somewhat distrust,26.29,26.29,25701,25739,0.0,PASS
+2025,AIAcc,Professional Developers,1 Highly distrust,19.66,19.65,25701,25739,-0.01,PASS
+2025,AIFrustration,All Respondents,almost_right,65.98,66.0,31476,31522,0.02,PASS
+2025,AIFrustration,All Respondents,debugging_slower,45.22,45.24,31476,31522,0.02,PASS
+2025,AIFrustration,All Respondents,not_regular_user,23.54,23.52,31476,31522,-0.02,PASS
+2025,AIFrustration,All Respondents,less_confident,20.04,20.06,31476,31522,0.02,PASS
+2025,AIFrustration,All Respondents,hard_to_understand,16.32,16.33,31476,31522,0.01,PASS
+2025,AIFrustration,All Respondents,other,11.61,11.61,31476,31522,0.0,PASS
+2025,AIFrustration,All Respondents,no_problems,3.96,3.96,31476,31522,0.0,PASS
